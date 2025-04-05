@@ -2,82 +2,123 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+// Define skills with image URLs for icons
 const skills = [
-  { name: 'React', icon: '⚛️' },
-  { name: 'JavaScript', icon: '📜' },
-  { name: 'Node.js', icon: '🟢' },
-  { name: 'TypeScript', icon: '🔷' },
-  { name: 'Python', icon: '🐍' },
-  { name: 'Docker', icon: '🐳' },
+  {
+    name: 'Java',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg'
+  },
+  {
+    name: 'C#',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg'
+  },
+  {
+    name: 'ASP .NET',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg'
+  },
+  {
+    name: 'Spring Boot',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg'
+  },
+  {
+    name: 'Angular',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg'
+  },
+  {
+    name: 'React.js',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+  },
+  {
+    name: 'Node.JS',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'
+  },
+  {
+    name: 'MySQL',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'
+  },
+  {
+    name: 'MongoDB',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'
+  },
+  {
+    name: 'Javascript',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+  },
+  {
+    name: 'Typescript',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
+  },
 ];
 
 function About() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="about" className="py-20 relative overflow-hidden">
-      {/* Parallax Background */}
-      <motion.div
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
-        }}
-        animate={{
-          y: inView ? [50, 0] : 50,
-          opacity: inView ? 1 : 0,
-        }}
-        transition={{ duration: 0.8 }}
-      />
-
-      <div className="container mx-auto px-4 relative">
-        <motion.h2
-          className="text-4xl font-bold text-white mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          About Me
-        </motion.h2>
-
-        <div className="grid md:grid-cols-2 gap-12" ref={ref}>
-          <motion.div
-            className="text-gray-300"
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+      <section id="about" className="py-20 relative overflow-hidden">
+        <div className="container mx-auto px-4" ref={ref}>
+          <motion.h2
+              className="text-4xl font-extrabold text-white mb-12 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6 }}
           >
-            <p className="mb-6 text-lg">
-              I'm a passionate full-stack developer with a keen eye for design and a love for creating
-              seamless user experiences. With expertise in modern web technologies, I transform complex
-              problems into elegant solutions.
-            </p>
-            <p className="text-lg">
-              When I'm not coding, you'll find me exploring new technologies, contributing to open-source
-              projects, or sharing knowledge with the developer community.
-            </p>
-          </motion.div>
+            About Me
+          </motion.h2>
 
-          <div className="grid grid-cols-2 gap-4">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={skill.name}
-                className="glass-card flex items-center space-x-3"
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.4, delay: 0.1 * index }}
-              >
-                <span className="text-2xl">{skill.icon}</span>
-                <span className="text-white">{skill.name}</span>
-              </motion.div>
-            ))}
+          <div className="grid lg:grid-cols-2 gap-16 items-center p-10">
+            {/* Left Column - About Text */}
+            <motion.div
+                className="text-gray-300 space-y-6 text-lg leading-relaxed"
+                initial={{ opacity: 0, x: -50 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.2 }}>
+              <p>
+                I'm a passionate software engineering undergraduate who loves building full-stack applications—
+                especially with Java at the core.
+              </p>
+              <p>
+                I thrive on bringing ideas to life through clean code, intuitive UI, and scalable architecture.
+                Every line of code I write is a step toward solving real-world problems creatively.
+              </p>
+              <p>
+                I embrace challenges, adapt quickly, and enjoy collaborating with others to shape meaningful digital
+                experiences.
+              </p>
+              <p>
+                Whether it’s a solo project or a team hustle, I’m all about continuous learning and pushing limits.
+              </p>
+            </motion.div>
+
+            {/* Right Column - Tech Stack */}
+            <motion.div
+                className="grid grid-cols-3 sm:grid-cols-4 gap-5"
+                initial={{ opacity: 0, x: 50 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              {skills.map((skill, index) => (
+                  <motion.div
+                      key={skill.name}
+                      className="flex flex-col items-center bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 transform transition duration-300 ease-in-out"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={inView ? { opacity: 1, y: 0 } : {}}
+                      transition={{ duration: 0.4, delay: 0.1 * index }}
+                      whileHover={{
+                        scale: 1.1,
+                        boxShadow: '0px 4px 15px rgba(255, 255, 255, 0.3)', // Subtle glow on hover
+                        transition: { duration: 0.3 },
+                      }}
+                  >
+                    <img src={skill.icon} alt={`${skill.name} icon`} className="w-10 h-10 mb-2" />
+                    <span className="text-white text-sm font-medium text-center">{skill.name}</span>
+                  </motion.div>
+              ))}
+            </motion.div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 }
+
 
 export default About;
