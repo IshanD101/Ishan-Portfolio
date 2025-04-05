@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-dark text-white font-poppins;
+}
+
+.glass {
+  @apply bg-white/10 backdrop-blur-md border border-white/20;
+}
+
+.section-padding {
+  @apply py-20 px-4 md:px-8 lg:px-16;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #FFD700 0%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-card {
+  @apply glass rounded-xl p-6 transition-all duration-300 hover:bg-white/15;
+}
+
+.nav-link {
+  @apply cursor-pointer px-4 py-2 text-sm font-medium transition-colors duration-200 hover:text-gold-light;
+}
+
+.nav-link.active {
+  @apply text-gold-light;
+}
+
+.button-primary {
+  @apply px-6 py-3 rounded-full bg-gradient-to-r from-gold-light to-gold transition-all duration-300 
+         hover:from-gold hover:to-gold-dark text-dark font-medium;
+}
+
+.timeline-line {
+  @apply absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-gold/30;
+}
+
+/* Swiper customization */
+.swiper {
+  padding: 2rem 1rem !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: theme('colors.gold.light') !important;
+}
+
+.swiper-pagination-bullet {
+  background: theme('colors.gold.light') !important;
+}
+
+.project-swiper {
+  overflow-y: visible !important;
+}
