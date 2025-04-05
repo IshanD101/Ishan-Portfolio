@@ -11,10 +11,10 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Hi, I'm <span className="gold-gradient">Your Name</span>
+            Hi, I'm <span className="text-green-400">Ishan Dakshina</span>
           </h1>
           <h2 className="text-xl md:text-2xl text-gray-300 mb-8">
-            Full Stack Developer & UI/UX Designer
+            Full Stack Developer
           </h2>
           <p className="text-gray-400 mb-8">
             Crafting beautiful and functional digital experiences
@@ -22,9 +22,8 @@ const Hero = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="button-primary"
-          >
-            Download CV
+            className="px-6 py-3 border border-green-400 text-green-400 rounded-md hover:bg-green-400 hover:text-white transition-colors duration-300">
+            Download Ishan's Resume
           </motion.button>
         </motion.div>
 
@@ -34,7 +33,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="relative"
         >
-          <div className="aspect-square rounded-full bg-gradient-to-r from-gold-light to-gold-dark opacity-20 absolute inset-0 blur-3xl" />
+          <div className="aspect-square rounded-full bg-gradient-to-r from-green-400 to-green-700 opacity-20 absolute inset-0 blur-3xl" />
           <img
             src="https://via.placeholder.com/500"
             alt="Profile"
