@@ -144,7 +144,7 @@ function Contact() {
                       type="email"
                       id="email"
                       className="w-full bg-dark/50 border border-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:border-green-400 transition-colors duration-300"
-                      placeholder="your.email@example.com"
+                      placeholder="Your e-mail"
                   />
                 </div>
                 <div>
