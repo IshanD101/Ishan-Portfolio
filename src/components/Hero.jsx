@@ -2,6 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
+  // Function to handle the resume download
+  const handleDownloadResume = () => {
+    // Create a link to your resume file
+    const link = document.createElement('a');
+    link.href = '/src/assets/Ishan_Dakshina_CV.pdf'; // Update this path to where your resume is stored
+    link.download = 'Ishan_Dakshina_CV.pdf'; // What the downloaded file will be named
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
       <section id="home" className="min-h-screen flex items-start md:items-center section-padding pt-0">
         <div className="container mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -21,6 +32,7 @@ const Hero = () => {
               Turning ideas into seamless digital experiences, front to back....!!!
             </p>
             <motion.button
+                onClick={handleDownloadResume}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-3 border border-green-400 text-green-400 rounded-md hover:bg-green-400 hover:text-white transition-colors duration-300">
