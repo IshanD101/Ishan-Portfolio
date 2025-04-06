@@ -68,12 +68,12 @@ function About() {
           <div className="grid lg:grid-cols-2 gap-16 items-center p-10">
             {/* Left Column - About Text */}
             <motion.div
-                className="text-gray-300 space-y-6 text-lg leading-relaxed"
+                className="text-gray-300 space-y-6 text-lg leading-relaxed text-left lg:text-left text-center"
                 initial={{ opacity: 0, x: -50 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 }}>
               <p>
-                I'm a passionate software engineering undergraduate who loves building full-stack applications—
+                I'm a passionate software engineering undergraduate who loves building full-stack applications,
                 especially with Java at the core.
               </p>
               <p>
@@ -85,7 +85,7 @@ function About() {
                 experiences.
               </p>
               <p>
-                Whether it’s a solo project or a team hustle, I’m all about continuous learning and pushing limits.
+                Whether it's a solo project or a team hustle, I'm all about continuous learning and pushing limits.
               </p>
             </motion.div>
 
@@ -119,6 +119,5 @@ function About() {
       </section>
   );
 }
-
 
 export default About;

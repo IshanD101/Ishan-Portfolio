@@ -18,7 +18,7 @@ const Hero = () => {
               Full Stack Developer
             </h2>
             <p className="text-gray-400 mb-6 md:mb-8">
-              Crafting beautiful and functional digital experiences
+              Turning ideas into seamless digital experiences, front to back....!!!
             </p>
             <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -36,9 +36,9 @@ const Hero = () => {
           >
             <div className="aspect-square rounded-full bg-gradient-to-r from-green-400 to-green-700 opacity-20 absolute inset-0 blur-3xl" />
             <img
-                src="https://via.placeholder.com/500"
+                src="/src/assets/ishan-pic.png"
                 alt="Profile"
-                className="rounded-full w-3/4 md:w-full relative z-10"
+                className="rounded-full w-3/4 relative z-10"
             />
           </motion.div>
         </div>
