@@ -48,7 +48,7 @@ const Hero = () => {
           >
             <div className="aspect-square rounded-full bg-gradient-to-r from-green-400 to-green-700 opacity-20 absolute inset-0 blur-3xl" />
             <img
-                src="/src/assets/ishan-pic.png"
+                src="/images/ishan-pic.png"
                 alt="Profile"
                 className="rounded-full w-3/4 relative z-10"
             />
